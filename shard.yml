@@ -1,0 +1,13 @@
+name: crystal-alpine-kemal
+version: 0.1.0
+
+authors:
+  - Sam Johnson <sam@durosoft.com>
+
+targets:
+  crystal-alpine-kemal:
+    main: src/crystal-alpine-kemal.cr
+
+crystal: 0.27.0
+
+license: MIT
