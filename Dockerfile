@@ -4,9 +4,9 @@ WORKDIR /src
 COPY . /src/
 RUN shards && crystal build --release --static src/*.cr -o crystal-app
 FROM alpine:latest
-EXPOSE 3000
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN apk add --update openssl pcre gc libevent libgcc
 COPY --from=builder /src/crystal-app /usr/src/app/
-ENTRYPOINT [ "/usr/src/app/crystal-app"]
+EXPOSE 3000
+ENTRYPOINT ./crystal-app
