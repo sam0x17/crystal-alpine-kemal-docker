@@ -8,7 +8,10 @@ TODO: Write installation instructions here
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+docker build -t crystal-alpine-kemal-test .
+docker run -it --rm -p 3000:3000 crystal-alpine-kemal-test:latest
+```
 
 ## Development
 
