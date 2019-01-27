@@ -2,7 +2,7 @@ FROM durosoft/crystal-alpine:latest as builder
 RUN mkdir /src
 WORKDIR /src
 COPY . /src/
-RUN shards && crystal build --release src/*.cr -o crystal-app
+RUN shards && crystal build --release --static src/*.cr -o crystal-app
 FROM alpine:latest
 EXPOSE 3000
 RUN mkdir -p /usr/src/app
